@@ -49,6 +49,7 @@ public class AirportRepository {
     }
 
     public int getNumberOfPeopleOn(Date date, String airportName) {
+        if(!airportMap.containsKey(airportName)) return 0;
         City city = airportMap.get(airportName).getCity();
         int count = 0;
 
