@@ -125,6 +125,8 @@ public class AirportRepository {
     }
 
     public String getAirportNameFromFlightId(Integer flightId) {
+        if(!flightMap.containsKey(flightId)) return null;
+
         City city =  flightMap.get(flightId).getFromCity();
 
         for(String airport : airportMap.keySet()){
