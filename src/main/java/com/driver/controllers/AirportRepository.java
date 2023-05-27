@@ -56,6 +56,7 @@ public class AirportRepository {
             Flight flight = flightMap.get(flightId);
 
             if( (flight.getFromCity().equals(city) || flight.getToCity().equals(city) ) && flight.getFlightDate().equals(date)){
+                if(flightPassengerMap.get(flightId) != null)
                 count += flightPassengerMap.get(flightId).size();
             }
         }
